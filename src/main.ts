@@ -30,9 +30,9 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors();
   app.useWebSocketAdapter(new SocketAdapter(app));
-  const configService = app.get(ConfigService);
-  const PORT = +configService.get<number>('PORT');
-  await app.listen(PORT, '0.0.0.0');
+  // const configService = app.get(ConfigService);
+  // const PORT = +configService.get<number>('PORT');
+  await app.listen(3000, '0.0.0.0');
 }
 
 bootstrap();

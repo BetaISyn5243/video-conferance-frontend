@@ -21,7 +21,6 @@ export class VideoGateway implements OnGatewayInit {
   @SubscribeMessage('joinRoom')
   handleRoomJoin(client: Socket, room: string) {
     client.join(room);
-    client.emit('joinedRoom', room);
     client.to(room).emit('user-connected', room);
   }
 

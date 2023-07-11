@@ -1,12 +1,11 @@
 import {
-  MessageBody,
   OnGatewayInit,
   SubscribeMessage,
   WebSocketGateway,
   WebSocketServer,
 } from '@nestjs/websockets';
 import { Logger } from '@nestjs/common';
-import { Socket, Server } from 'socket.io';
+import { Server, Socket } from 'socket.io';
 
 // @WebSocketGateway(80, { namespace: 'chat' })
 @WebSocketGateway({ namespace: '/chat' })
